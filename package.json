@@ -7,9 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "pages:build": "npm run build",
-    "pages:dev": "wrangler pages dev dist",
-    "deploy": "npm run build && wrangler pages deploy dist --project-name flyr"
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
     "clsx": "^2.1.1",
