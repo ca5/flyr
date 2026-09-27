@@ -23,6 +23,12 @@ A4用紙1枚に対して、フライヤー画像を無駄なく**6枚面付け�
 
 ---
 
+## 🌐 公開URL (Cloudflare)
+
+- **本番URL**: [https://flyr.ca54makske.workers.dev](https://flyr.ca54makske.workers.dev)
+
+---
+
 ## 🚀 ローカル開発環境の起動
 
 ```bash
@@ -33,29 +39,18 @@ npm install
 npm run dev
 ```
 
-ブラウザで `http://localhost:5190/` を開いてご利用ください。
-
 ---
 
-## ☁️ Cloudflare Pages へのデプロイ手順
+## ☁️ Cloudflare へのデプロイ手順
 
-本アプリケーションは完全な静的サイト（SPA）のため、Cloudflare Pages に $0 で簡単にデプロイ・公開できます。
+### ワンコマンドでデプロイ（おすすめ）
 
-以下の **2つの方法（CLI直接デプロイ / GitHub連携）** のいずれかを選択してください。
+```bash
+# ビルド & Cloudflare へのデプロイ
+npm run deploy
+```
 
-### 方法 1: ターミナル (Wrangler CLI) から直接デプロイ 【おすすめ・最短】
-
-1. **Cloudflare にログイン（初回のみ）**:
-   ```bash
-   npx wrangler login
-   ```
-   ※ブラウザが立ち上がるので、Cloudflareアカウントで承認してください。
-
-2. **デプロイを実行**:
-   ```bash
-   npm run deploy
-   ```
-   自動的にビルド（`dist` 出力）が実行され、Cloudflare Pages 上にプロジェクトが作成・公開されます。完了すると公開用 URL（`https://flyr.pages.dev` など）が表示されます。
+※初回のみ `npx wrangler login` でブラウザ認証を行ってください。以降は `npm run deploy` を実行するだけで、ビルドから Cloudflare への全世界公開までが自動完了します。
 
 ---
 
